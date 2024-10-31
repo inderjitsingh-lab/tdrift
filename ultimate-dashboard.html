@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ultimate-dashboard.css">
+    <script src="ultimate-dashboard.js" defer></script>
+    <title>Ultimate Plan Dashboard</title>
+</head>
+<body>
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="logo">
+            <a href="index.html">TaleDrift</a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="payment.html">Pricing</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+          
+        </nav>
+        <div class="header-actions">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <div class="notification-dropdown">
+                    <p>Recent Notifications</p>
+                    <ul>
+                        <li>No new notifications</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-profile">
+                <img src="user-avatar.png" alt="Profile" class="profile-img">
+                <div class="profile-dropdown">
+                    <a href="profile.html">View Profile</a>
+                    <a href="edit-profile.html">Edit Profile</a>
+                    <a href="logout.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+    <!-- Placeholder for Other Sections -->
+    <!-- Create Story Section -->
+    <section class="create-story-section">
+        <div class="create-story-container">
+            <h2>Create Your Personalized Story</h2>
+
+            <form action="https://formspree.io/f/xbljgdlv"
+            method="POST" id="createStoryForm" class="create-story-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                                    <input name="email" type="text" id="child-name" placeholder="Enter Your Email Address" required></div>
+               
+<div class="form-group">
+    <label for="child-name">Child's Name:</label>
+                    <input type="text" name="childname" id="child-name" placeholder="Enter child's name" required></div>
+    
+    
+                    <div class="form-group">
+                    <label for="story-theme">Select Story Theme:</label>
+                    <select name="StoryTheme" id="story-theme" required>
+                        <option value="" disabled selected>Choose a theme...</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Animal Kingdom">Animal Kingdom</option>
+                        <option value="Friendship">Friendship</option>
+                        <option value="Overcoming Fears">Overcoming Fears</option>
+                        <option value="Animals and Wildlife">Animals and Wildlife</option>
+                        <option value="Dreams and Aspirations">Dreams and Aspirations</option>
+                        <option value="Kindness and Generosity">Kindness and Generosity</option>
+<option value="Exploration and Discovery">Exploration and Discovery</option>
+<option value="Self-Confidence">Self-Confidence</option>
+<option value="Time Travel">Time Travel</option>
+<option value="Space Exploration">Space Exploration</option>
+<option value="Superheroes">Superheroes</option>
+<option value="Mystery and Detective">Mystery and Detective</option>
+<option value="Mythology and Legends">Mythology and Legends</option>
+<option value="Learning and Growth">Learning and Growth</option>
+<option value="Holidays and Celebrations">Holidays and Celebrations</option>
+<option value="Fairy Tales and Folk Tales">Fairy Tales and Folk Tales</option>
+<option value="Friendship and Loyalty">Friendship and Loyalty</option>
+<option value="Bravery and Courage">Bravery and Courage</option>
+<option value="Creativity and Imagination">Creativity and Imagination</option>
+<option value="Magic School/Academy">Magic School/Academy</option>
+<option value="Lost Worlds or Hidden Places">Lost Worlds or Hidden Places</option>
+<option value="Finding Home">Finding Home</option>
+<option value="Underwater Adventures">Underwater Adventures</option>
+<option value="Helping Others">Helping Others</option>
+<option value="Good vs. Evil">Good vs. Evil</option>
+<option value="Building Confidence">Building Confidence</option>
+<option value="Exploring New Cultures">Exploring New Cultures</option>
+<option value="Pirates and Treasure Hunts">Pirates and Treasure Hunts</option>
+<option value="Seasonal Stories">Seasonal Stories (e.g., Spring, Summer)</option>
+<option value="Life Lessons">Life Lessons</option>
+<option value="Learning from Mistakes">Learning from Mistakes</option>
+<option value="Science Fiction">Science Fiction</option>
+<option value="Royalty and Castles">Royalty and Castles</option>
+<option value="Sports and Teamwork">Sports and Teamwork</option>
+<option value="Mystical Creatures">Mystical Creatures</option>
+<option value="Magical Journeys">Magical Journeys</option>
+<option value="Inspirational Figures">Inspirational Figures</option>
+                    </select>
+    </div>
+    
+    
+    
+    <div class="form-group">
+                    <label  for="story-setting">Story Setting/Location:</label>
+                    <input name="Story Setting and location" type="text" id="story-setting" placeholder="e.g., Jungle, City, etc.">
+                </div>
+
+                    <div class="form-group"> 
+    
+                    <label for="additional-characters">Additional Characters:</label>
+                    <input name="additional-characters" type="text" id="additional-characters" placeholder="e.g., Friend, Sibling">
+                </div>
+                <div class="form-group">
+                    <label for="language-preference">Language Preference:</label>
+                    <select name="language-preference" id="language-preference" required>
+                        <option value="" disabled selected>Select language...</option>
+                        <option value="English">English</option>
+<option value="Spanish">Spanish</option>
+<option value="French">French</option>
+<option value="German">German</option>
+<option value="Italian">Italian</option>
+<option value="Portuguese">Portuguese</option>
+<option value="Mandarin Chinese">Mandarin Chinese</option>
+<option value="Japanese">Japanese</option>
+<option value="Korean">Korean</option>
+<option value="Hindi">Hindi</option>
+<option value="Arabic">Arabic</option>
+                    </select>
+                </div>
+    
+    
+               
+    <div class="form-group"> 
+                    <label for="favorite-activity">Child's Favorite Activity or Hobby:</label>
+                    <input name="favorite-activity" type="text" id="favorite-activity" placeholder="e.g., Drawing, Football, etc.">
+                </div>
+                    <div class="form-group"> 
+                    <label for="background-music">Select Background Music:</label>
+                    <select name="background-music" id="background-music" required>
+                        <option value="" disabled selected>Select background music...</option>
+                        <option value="Calm">Calm</option>
+                        <option value="Playful">Playful</option>
+                        <option value="Adventurous">Adventurous</option>
+                        <option value="Sleepy">Sleepy</option>
+                        <option value="Calm and Relaxing">Calm and Relaxing</option>
+<option value="Upbeat and Energetic">Upbeat and Energetic</option>
+<option value="Dramatic and Tense">Dramatic and Tense</option>
+<option value="Mystical and Fantasy">Mystical and Fantasy</option>
+<option value="Adventurous and Exciting">Adventurous and Exciting</option>
+<option value="Happy and Cheerful">Happy and Cheerful</option>
+<option value="Peaceful and Serene">Peaceful and Serene</option>
+<option value="Melancholic and Emotional">Melancholic and Emotional</option>
+<option value="Epic and Heroic">Epic and Heroic</option>
+<option value="Playful and Fun">Playful and Fun</option>
+<option value="Mysterious and Suspenseful">Mysterious and Suspenseful</option>
+<option value="Romantic and Warm">Romantic and Warm</option>
+<option value="Classical and Elegant">Classical and Elegant</option>
+<option value="Electronic and Modern">Electronic and Modern</option>
+<option value="Jazz and Swing">Jazz and Swing</option>
+<option value="Ambient and Atmospheric">Ambient and Atmospheric</option>
+<option value="Folk and Acoustic">Folk and Acoustic</option>
+<option value="Cinematic and Grand">Cinematic and Grand</option>
+<option value="Nature and Ambient Sounds">Nature and Ambient Sounds</option>
+<option value="Traditional and Cultural">Traditional and Cultural</option>
+                    </select>
+                </div>
+                <div class="form-group"> 
+    
+                    <label for="narrator-style">Select Narrator Style:</label>
+                    <select name="narrator-style" id="narrator-style" required>
+                        <option value="" disabled selected>Select narrator style...</option>
+                        <option value="Soft and Soothing">Soft and Soothing</option>
+<option value="Energetic and Enthusiastic">Energetic and Enthusiastic</option>
+<option value="Warm and Friendly">Warm and Friendly</option>
+<option value="Calm and Relaxed">Calm and Relaxed</option>
+<option value="Mystical and Mysterious">Mystical and Mysterious</option>
+<option value="Deep and Serious">Deep and Serious</option>
+<option value="Playful and Fun">Playful and Fun</option>
+<option value="Dramatic and Engaging">Dramatic and Engaging</option>
+<option value="Gentle and Kind">Gentle and Kind</option>
+<option value="Lively and Animated">Lively and Animated</option>
+<option value="Grand and Epic">Grand and Epic</option>
+<option value="Storyteller">Storyteller</option>
+<option value="Whimsical and Imaginative">Whimsical and Imaginative</option>
+<option value="Classic and Formal">Classic and Formal</option>
+<option value="Intense and Emotional">Intense and Emotional</option>
+<option value="Nurturing and Reassuring">Nurturing and Reassuring</option>
+<option value="Adventurous and Bold">Adventurous and Bold</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="child-name"> Special Request:</label>
+                                    <input name="message" type="text" id="child-name" placeholder="Enter Your Special Request" required></div>
+                <button type="submit" class="submit-btn">Create Story</button>
+            </form>
+
+            <!-- Success Modal -->
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Submission Successful!</h3>
+                    <p>Your story is in process. You will be notified once it’s ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- Success Modal -->
+        <div id="bedtimeSuccessModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Submission Successful!</h3>
+                <p>Your bedtime story is in process. You will be notified once it’s ready.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+</main>
+
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <a href="#"><span>Tale</span>Drift</a>
+        </div>
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+
+                <li><a href="payment.html">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <!-- Footer Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 TaleDrift. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

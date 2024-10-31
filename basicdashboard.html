@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basic-dashboard.css">
+    <script src="basic-dashboard.js" defer></script>
+    <title>Basic Plan Dashboard</title>
+</head>
+<body>
+     <!-- Dashboard Header -->
+     <header class="dashboard-header">
+        <div class="logo">
+            <a href="index.html">TaleDrift</a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="payment.html">Pricing</a></li>
+                <li><a href="contact.html"> Contact</a></li>
+            </ul>
+          
+        </nav>
+        <div class="header-actions">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <div class="notification-dropdown">
+                    <p>Recent Notifications</p>
+                    <ul>
+                        <li>No new notifications</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-profile">
+                <img src="user-avatar.png" alt="Profile" class="profile-img">
+                <div class="profile-dropdown">
+                    <a href="profile.html">View Profile</a>
+                    <a href="edit-profile.html">Edit Profile</a>
+                    <a href="logout.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+<!-- Main Content Area -->
+<main class="dashboard-main">
+   
+
+    <!-- Placeholder for Other Sections -->
+    <!-- Create Story Section -->
+    <section class="create-story-section">
+        <div class="create-story-container">
+            <h2>Create Your Personalized Story</h2>
+
+            <form  action="https://formspree.io/f/mrbgpbwn"
+            method="POST"    id="createStoryForm" class="create-story-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                                    <input name="email"  type="text" id="child-name" placeholder="Enter Your Email Address" required></div>
+                <!-- Child's Name -->
+                <div class="form-group">
+                    <label  for="childName">Child's Name:</label>
+                    <input name="childname" type="text" id="childName" placeholder="Enter your child's name" required>
+                </div>
+
+                <!-- Select Story Theme -->
+                <div class="form-group">
+                    <label name="Storytheme"for="storyTheme">Select Story Theme:</label>
+                    <select name="theme" id="storyTheme" required>
+                        <option value="">Choose a theme...</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="animal-kingdom">Animal Kingdom</option>
+                        <option value="space-exploration">Space Exploration</option>
+                        <option value="underwater">Underwater World</option>
+                    </select>
+                </div>
+
+                
+                <!-- Submit Button -->
+                <button  type="submit" class="submit-btn">Create Story</button>
+            </form>
+
+            <!-- Success Modal -->
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Submission Successful!</h3>
+                    <p>Your story is in process. You will be notified once it’s ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+</main>
+
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <a href="#"><span>Tale</span>Drift</a>
+        </div>
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+
+                <li><a href="payment.html">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <!-- Footer Copyright -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 TaleDrift. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>TaleDrift Header</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">TaleDrift</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Features</a></li>
+                <li><a href="payment.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="signin-btn">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="payment-hero-section">
+        <div class="payment-hero-content">
+            <h1>Secure Your TaleDrift Subscription</h1>
+            <p>Unlock magical, personalized bedtime stories by subscribing to our premium plan.</p>
+            <div class="payment-hero-buttons">
+                <a href="#subscription-plans" class="btn-primary">Choose Plan</a>
+                <a href="about.html" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Plan Selection Section -->
+    <section id="subscription-plans" class="subscription-plans">
+        <h2>Select Your Personalized Video Customizations</h2>
+        <p>Choose a plan that fits your child's storytelling journey.</p>
+        <div class="plan-cards">
+            <div class="plan-card basic-plan" data-price="5">
+                <div class="plan-header">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Basic Plan</h3>
+                    <p class="price">$5.99</p>
+                </div>
+                <ul class="plan-details">
+                    <li> Add Child Name</li>
+                    <li> Add Theme</li>
+                    <li> Add Environment variables</li>
+                    <li> Color Preference</li>
+                </ul>
+               <a href="https://buy.stripe.com/6oEcPA6fZ8rBeisaEH"><button  class="select-plan-btn">Select Plan</button></a> 
+            </div>
+            <div class="plan-card standard-plan" data-price="10">
+                <div class="plan-header">
+                    <i class="fas fa-star"></i>
+                    <h3>Standard Plan</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                <ul class="plan-details">
+                    <li> Customizations Included</li>
+                    <li> Add Child's Name</li>
+                    <li> Select Story Theme</li>
+                    <li> Story Setting/Location</li>
+                    <li> Additional Characters</li>
+                    <li> Language Preference</li>
+                </ul>
+                <a href="https://buy.stripe.com/eVa6rc6fZePZ7U4fZ2"> <button class="select-plan-btn">Select Plan</button></a>
+            </div>
+            <div class="plan-card premium-plan" data-price="15">
+                <div class="plan-header">
+                    <i class="fas fa-crown"></i>
+                    <h3>Ultimate Plan</h3>
+                    <p class="price">$9.99</p>
+                </div>
+                <ul class="plan-details">
+                    <li> Every Possible Customization Available</li>
+                    <li> Customizations Included-</li>
+                    <li> Add Child's Name</li>
+                    <li> Select Story Theme</li>
+                    <li> Additional Characters</li>
+                    <li> More Language Preference</li>
+                    <li> Add Child's Favorite Activity or Hobby:</li>
+                    <li> Select Background Music</li>
+                    <li> Select Narrator Style</li>
+                    <li> Special Request - Add anything to personalize</li>
+                    
+                </ul>
+                <a href="https://buy.stripe.com/3cs16S9sbbDNgqAcMR"><button class="select-plan-btn">Select Plan</button></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Footer Logo -->
+            <div class="footer-logo">
+                <a href="#"><span>Tale</span>Drift</a>
+            </div>
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+    
+                    <li><a href="payment.html">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <!-- Footer Copyright -->
+            <div class="footer-copyright">
+                <p>&copy; 2024 TaleDrift. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FontAwesome for mobile menu icon -->
+    
+
+    <script>
+        // Simulate payment success
+        function simulatePaymentSuccess() {
+            // Simulating payment success (set to true)
+            const paymentSuccess = true;
+
+            // Show confirmation popup if payment is successful
+            if (paymentSuccess) {
+                document.getElementById('confirmation-overlay').style.display = 'flex';
+            }
+        }
+
+        // Close popup when clicking the close button
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('confirmation-overlay').style.display = 'none';
+        });
+
+        // Call the function to simulate payment success
+        simulatePaymentSuccess();
+    </script>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+    
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="payment.js"></script>
+    <script src="server.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
