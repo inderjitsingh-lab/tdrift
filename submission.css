@@ -95,7 +95,7 @@ body {
 .submission-confirmation {
     flex-grow: 1;
     display: flex;
-    margin-top: 45px;
+   
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
